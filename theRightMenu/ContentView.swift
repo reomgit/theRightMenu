@@ -11,8 +11,7 @@ import SwiftUI
 struct ContentView: View {
     private let features = [
         Feature(symbol: "menubar.rectangle", title: "Menu bar control", detail: "Create files from the macOS menu bar and manage the Finder extension without keeping a Dock app open."),
-        Feature(symbol: "doc.badge.plus", title: "Create files", detail: "Text, Markdown, JSON, Swift, HTML, CSS, JavaScript, and shell scripts."),
-        Feature(symbol: "folder.badge.plus", title: "Create folders", detail: "Adds a new folder exactly where you right-click in Finder."),
+        Feature(symbol: "doc.badge.plus", title: "Create named files", detail: "Text, Markdown, JSON, Swift, HTML, CSS, JavaScript, and shell scripts."),
         Feature(symbol: "doc.on.doc", title: "Duplicate here", detail: "Copies the selected file or folder beside the original with a safe unique name."),
         Feature(symbol: "link", title: "Copy paths", detail: "Copies POSIX paths for selected Finder items to the clipboard."),
         Feature(symbol: "terminal", title: "Open Terminal", detail: "Opens Terminal at the current folder or selected folder.")

@@ -50,14 +50,6 @@ private struct MenuBarContent: View {
         }
 
         Button {
-            MenuBarActions.createFolder()
-        } label: {
-            Label("New Folder...", systemImage: "folder.badge.plus")
-        }
-
-        Divider()
-
-        Button {
             MenuBarActions.openExtensionSettings()
         } label: {
             Label("Open Finder Extension Settings", systemImage: "switch.2")
@@ -208,40 +200,6 @@ private enum MenuBarActions {
         }
     }
 
-    static func createFolder() {
-        let panel = NSOpenPanel()
-        panel.title = "Choose Location"
-        panel.message = "Choose where The Right Menu should create the folder."
-        panel.prompt = "Create Folder"
-        panel.canChooseFiles = false
-        panel.canChooseDirectories = true
-        panel.canCreateDirectories = true
-        panel.allowsMultipleSelection = false
-
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        panel.begin { response in
-            guard response == .OK, let directory = panel.url else {
-                return
-            }
-
-            let didStartAccessing = directory.startAccessingSecurityScopedResource()
-            defer {
-                if didStartAccessing {
-                    directory.stopAccessingSecurityScopedResource()
-                }
-            }
-
-            let folderURL = uniqueURL(in: directory, preferredName: "New Folder")
-
-            do {
-                try FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: false)
-                NSWorkspace.shared.activateFileViewerSelecting([folderURL])
-            } catch {
-                showError(error)
-            }
-        }
-    }
-
     static func openExtensionSettings() {
         guard let url = URL(string: "x-apple.systempreferences:com.apple.ExtensionsPreferences") else {
             return
@@ -276,28 +234,6 @@ private enum MenuBarActions {
         if template.makeExecutable {
             try FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: url.path)
         }
-    }
-
-    private static func uniqueURL(in directory: URL, preferredName: String) -> URL {
-        let preferredURL = directory.appendingPathComponent(preferredName)
-
-        if !FileManager.default.fileExists(atPath: preferredURL.path) {
-            return preferredURL
-        }
-
-        let baseName = preferredURL.deletingPathExtension().lastPathComponent
-        let pathExtension = preferredURL.pathExtension
-
-        for index in 2...999 {
-            let candidateName = pathExtension.isEmpty ? "\(baseName) \(index)" : "\(baseName) \(index).\(pathExtension)"
-            let candidateURL = directory.appendingPathComponent(candidateName)
-
-            if !FileManager.default.fileExists(atPath: candidateURL.path) {
-                return candidateURL
-            }
-        }
-
-        return directory.appendingPathComponent(UUID().uuidString).appendingPathExtension(pathExtension)
     }
 
     private static func showError(_ error: Error) {

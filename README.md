@@ -2,7 +2,7 @@
 
 The Right Menu is a macOS menu bar utility with a Finder Sync extension that adds everyday file actions to Finder's right-click menu.
 
-The important limitation: macOS does not let third-party apps add a literal new column to Finder's native context menu. The supported Apple API is a Finder Sync extension. This project uses that API to add a top-level Finder menu item named **The Right Menu**, with submenu actions for creating files, creating folders, duplicating items, copying paths, and opening Terminal.
+The important limitation: macOS does not let third-party apps add a literal new column to Finder's native context menu. The supported Apple API is a Finder Sync extension. This project uses that API to add a top-level Finder menu item named **The Right Menu**, with submenu actions for creating files, duplicating items, copying paths, and opening Terminal.
 
 ## Features
 
@@ -15,8 +15,7 @@ The important limitation: macOS does not let third-party apps add a literal new 
   - CSS
   - JavaScript
   - Shell Script
-- Create a new folder from the macOS menu bar by choosing a destination folder.
-- Create new files from Finder:
+- Create new named files from Finder:
   - Plain Text
   - Markdown
   - JSON
@@ -25,7 +24,6 @@ The important limitation: macOS does not let third-party apps add a literal new 
   - CSS
   - JavaScript
   - Shell Script
-- Create a new folder at the clicked Finder location.
 - Duplicate selected files or folders beside the original.
 - Copy POSIX paths for selected items.
 - Open Terminal at the current or selected folder.
