@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     private let features = [
+        Feature(symbol: "menubar.rectangle", title: "Menu bar control", detail: "Create files from the macOS menu bar and manage the Finder extension without keeping a Dock app open."),
         Feature(symbol: "doc.badge.plus", title: "Create files", detail: "Text, Markdown, JSON, Swift, HTML, CSS, JavaScript, and shell scripts."),
         Feature(symbol: "folder.badge.plus", title: "Create folders", detail: "Adds a new folder exactly where you right-click in Finder."),
         Feature(symbol: "doc.on.doc", title: "Duplicate here", detail: "Copies the selected file or folder beside the original with a safe unique name."),
@@ -24,10 +25,10 @@ struct ContentView: View {
             Divider()
 
             VStack(alignment: .leading, spacing: 12) {
-                Text("Finder menu extension")
+                Text("Menu bar app with Finder extension")
                     .font(.headline)
 
-                Text("macOS does not allow apps to add a literal second column to Finder's native right-click menu. The supported version is a Finder Sync extension that adds a submenu named The Right Menu.")
+                Text("The app lives in the macOS menu bar. Finder integration still has to use Apple's Finder Sync extension model: macOS does not allow apps to add a literal second column to Finder's native right-click menu.")
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -58,7 +59,7 @@ struct ContentView: View {
                 Text("Enable it")
                     .font(.headline)
 
-                Text("Build and run this app, then enable the Finder extension in System Settings > General > Login Items & Extensions > Finder Extensions. Relaunch Finder if the menu does not appear immediately.")
+                Text("Build and run this app, then enable the Finder extension in System Settings > General > Login Items & Extensions > Finder Extensions. The menu bar item works independently; Finder actions appear after the extension is enabled.")
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -90,7 +91,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("The Right Menu")
                     .font(.largeTitle.weight(.semibold))
-                Text("Everyday Finder actions where people already reach for them.")
+                Text("A macOS menu bar utility with honest Finder context menu integration.")
                     .foregroundStyle(.secondary)
             }
         }
