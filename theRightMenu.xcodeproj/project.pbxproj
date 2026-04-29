@@ -6,11 +6,58 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AF95B70A2FA1E01000949BE5 /* RightMenuFinderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF95B7002FA1E01000949BE5 /* RightMenuFinderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF95B70C2FA1E01000949BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF95B6582FA1DF6900949BE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF95B7052FA1E01000949BE5;
+			remoteInfo = RightMenuFinderExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF95B7092FA1E01000949BE5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PLUGINS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				AF95B70A2FA1E01000949BE5 /* RightMenuFinderExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AF95B7002FA1E01000949BE5 /* RightMenuFinderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RightMenuFinderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF95B6602FA1DF6900949BE5 /* theRightMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theRightMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AF95B70D2FA1E01000949BE5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AF95B7052FA1E01000949BE5 /* RightMenuFinderExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		AF95B7012FA1E01000949BE5 /* RightMenuFinderExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AF95B70D2FA1E01000949BE5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
+			path = RightMenuFinderExtension;
+			sourceTree = "<group>";
+		};
 		AF95B6622FA1DF6900949BE5 /* theRightMenu */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = theRightMenu;
@@ -26,6 +73,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF95B7032FA1E01000949BE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AF95B6622FA1DF6900949BE5 /* theRightMenu */,
+				AF95B7012FA1E01000949BE5 /* RightMenuFinderExtension */,
 				AF95B6612FA1DF6900949BE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AF95B6602FA1DF6900949BE5 /* theRightMenu.app */,
+				AF95B7002FA1E01000949BE5 /* RightMenuFinderExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +111,12 @@
 				AF95B65C2FA1DF6900949BE5 /* Sources */,
 				AF95B65D2FA1DF6900949BE5 /* Frameworks */,
 				AF95B65E2FA1DF6900949BE5 /* Resources */,
+				AF95B7092FA1E01000949BE5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF95B70B2FA1E01000949BE5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AF95B6622FA1DF6900949BE5 /* theRightMenu */,
@@ -70,6 +128,28 @@
 			productReference = AF95B6602FA1DF6900949BE5 /* theRightMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF95B7052FA1E01000949BE5 /* RightMenuFinderExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF95B7082FA1E01000949BE5 /* Build configuration list for PBXNativeTarget "RightMenuFinderExtension" */;
+			buildPhases = (
+				AF95B7022FA1E01000949BE5 /* Sources */,
+				AF95B7032FA1E01000949BE5 /* Frameworks */,
+				AF95B7042FA1E01000949BE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AF95B7012FA1E01000949BE5 /* RightMenuFinderExtension */,
+			);
+			name = RightMenuFinderExtension;
+			packageProductDependencies = (
+			);
+			productName = RightMenuFinderExtension;
+			productReference = AF95B7002FA1E01000949BE5 /* RightMenuFinderExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -80,6 +160,9 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					AF95B7052FA1E01000949BE5 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					AF95B65F2FA1DF6900949BE5 = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -100,12 +183,20 @@
 			projectRoot = "";
 			targets = (
 				AF95B65F2FA1DF6900949BE5 /* theRightMenu */,
+				AF95B7052FA1E01000949BE5 /* RightMenuFinderExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF95B65E2FA1DF6900949BE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF95B7042FA1E01000949BE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +213,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF95B7022FA1E01000949BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF95B70B2FA1E01000949BE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF95B7052FA1E01000949BE5 /* RightMenuFinderExtension */;
+			targetProxy = AF95B70C2FA1E01000949BE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF95B6692FA1DF6B00949BE5 /* Debug */ = {
@@ -254,10 +360,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8F7S27Z23;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SELECTED_FILES = read-write;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -286,10 +392,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8F7S27Z23;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SELECTED_FILES = read-write;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,6 +406,64 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.reom.theRightMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AF95B7062FA1E01000949BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8F7S27Z23;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = RightMenuFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reom.theRightMenu.FinderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AF95B7072FA1E01000949BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8F7S27Z23;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = RightMenuFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reom.theRightMenu.FinderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -326,6 +490,15 @@
 			buildConfigurations = (
 				AF95B66C2FA1DF6B00949BE5 /* Debug */,
 				AF95B66D2FA1DF6B00949BE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF95B7082FA1E01000949BE5 /* Build configuration list for PBXNativeTarget "RightMenuFinderExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF95B7062FA1E01000949BE5 /* Debug */,
+				AF95B7072FA1E01000949BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
